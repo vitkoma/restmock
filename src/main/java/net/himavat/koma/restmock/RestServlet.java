@@ -58,6 +58,7 @@ public class RestServlet extends HttpServlet {
         if (! jsonFile.exists()) {
             // response file not found
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            return;
         }
 
         response.setContentType("application/json");
